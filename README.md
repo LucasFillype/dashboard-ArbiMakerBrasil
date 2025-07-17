@@ -6,7 +6,7 @@ Esse é um projeto em [Next.js](https://nextjs.org)
 - HTML e TailwindCSS
 - JavaScript
 - Sahdcn.UI
-- Git e Github
+- Github
 
 ## Projeto:
 
