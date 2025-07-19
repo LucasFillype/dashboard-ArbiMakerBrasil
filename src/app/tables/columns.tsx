@@ -16,9 +16,6 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 
-// Tipo dos dado
-
-
 export type Payment = {
   id: string
   amount: number
