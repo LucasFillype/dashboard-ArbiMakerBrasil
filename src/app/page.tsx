@@ -32,9 +32,19 @@ import BarChart1 from "@/components/ui/horizontalbarchart";
 import HorizontalBarChart from "@/components/ui/horizontalbarchart";
 import { CardBanco } from "@/components/ui/combobox";
 
+
 export default function Home() {
   return (
     <main className="sm:ml-14 p-4 bg-gradient-to-br from-zinc-950 via-neutral-900 to-zinc-950 text-zinc-200 min-h-screen">
+=======
+
+export default function Home() {
+  return (
+    <main className="sm:ml-14 p-4 bg-gradient-to-br from-zinc-950 via-neutral-900 to-zinc-950 text-zinc-200 min-h-screen">
+      <div className="mb-4">
+       <h1 className="text-lg"> Seja bem vindo, Lucas! </h1>
+      </div>
+
       <section className="grid grid-cols-2 lg:grid-cols-5 gap-4 ">
         <Card className="bg-zinc-900  border-zinc-900 shadow-md rounded-2xl transition-transform duration-300 ease-in-out hover:-translate-y-5">
           <CardHeader className="bg-zinc-900">
@@ -47,7 +57,11 @@ export default function Home() {
           <CardContent className="text-base sm:text-lg font-bold text-white">
             R$33.000
           </CardContent>
+
            <CardDescription className="text-emerald-400 flex justify-center">
+
+           <CardDescription className="text-emerald-400 flex justify-center font-bold">
+
               Total da sua banca
             </CardDescription>
           <div className="flex justify-center"></div>
