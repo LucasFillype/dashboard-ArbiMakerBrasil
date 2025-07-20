@@ -70,6 +70,7 @@ export function GamesTable<TData extends object, TValue>({
   const [showAddRow, setShowAddRow] = React.useState(false);
   const [newRowData, setNewRowData] = React.useState<any>({});
   const [isDeleteMode, setIsDeleteMode] = React.useState(false);
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>()
 
   return (
     <div>
@@ -88,16 +89,16 @@ export function GamesTable<TData extends object, TValue>({
             )}
           </Button>
           {showAddRow && (
-          <Button
-                  className="border border-green-600"
-                  onClick={() => {
-                    setTableData([...tableData, newRowData]);
-                    setNewRowData({});
-                    setShowAddRow(false);
-                  }}
-                >
-                  Salvar Jogo
-                </Button>
+            <Button
+              className="border border-green-600"
+              onClick={() => {
+                setTableData([...tableData, newRowData]);
+                setNewRowData({});
+                setShowAddRow(false);
+              }}
+            >
+              Salvar Jogo
+            </Button>
           )}
         </div>
         <DropdownMenu>
@@ -134,9 +135,9 @@ export function GamesTable<TData extends object, TValue>({
                       {header.isPlaceholder
                         ? null
                         : flexRender(
-                            header.column.columnDef.header,
-                            header.getContext()
-                          )}
+                          header.column.columnDef.header,
+                          header.getContext()
+                        )}
                     </TableHead>
                   );
                 })}
@@ -146,11 +147,15 @@ export function GamesTable<TData extends object, TValue>({
           <TableBody>
             {showAddRow && (
               <div className="flex  gap-2 w-full justify-center mt-4 ">
-                {columns.map((col) => (
+                {columns.map((col) => {
+                  if (col.id === "Data") {
+                    return <DatePickerDemo key={col.id}/>
+                  }
+                  return (
                   <Input
                     key={col.id}
                     placeholder={col.id}
-                    className="w-40 text-white border-white-700"
+                    className="w-40 text-white border border-zinc-800"
                     onChange={(e) =>
                       setNewRowData((prev: any) => ({
                         ...prev,
@@ -158,9 +163,10 @@ export function GamesTable<TData extends object, TValue>({
                       }))
                     }
                   />
-                ))}
+                  )})}
               </div>
             )}
+            
             {table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row) => (
                 <TableRow

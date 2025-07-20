@@ -22,12 +22,12 @@ export function DatePickerDemo() {
         <Button
           variant={"outline"}
           className={cn(
-            "w-[210px] justify-start transition-transform duration-300 hover:-translate-y-1 hover:shadow-md w-[200px] bg-emerald-400 border border-zinc-900 shadow-md  text-black",
+            "justify-start transition-transform duration-300 hover:-translate-y-1 hover:shadow-md w-[170px] border border-zinc-800 shadow-md bg-zinc-900 text-white",
             !date && "text-muted-foreground"
           )}
         >
           <CalendarIcon className="mr-2 h-4 w-4" />
-          {date ? format(date, "PPP") : <span>Escolha o período</span>}
+          {date ? format(date, "PPP") : <span>Escolha a Data</span>}
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-auto p-0 text-white bg-zinc-900 border-zinc-900">
