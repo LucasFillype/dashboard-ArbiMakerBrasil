@@ -1,7 +1,7 @@
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { Home, HomeIcon, LineChart, Package, PanelBottom, Settings2, ShoppingBag, Users, Table, User, User2, Table2, Volleyball } from "lucide-react";
+import { Home, HomeIcon, LineChart, Package, PanelBottom, Settings2, ShoppingBag, Users, Table, User, User2, Table2, Volleyball, Notebook } from "lucide-react";
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "../ui/tooltip";
 import {
   Avatar,
@@ -44,6 +44,15 @@ export function Sidebar() {
               <TooltipTrigger asChild>
                 <Link href="/tables" className="flex h-9 w-9 shrink-0 items-center justify-center text-primary-foreground rounded-full transition-transform duration-300 hover:-translate-y-1">
                   <User2 className="h-5 w-5 text-black"></User2>
+                  <span className="sr-only"> DashBoard Avatar</span>
+                </Link>
+              </TooltipTrigger>
+            </Tooltip>
+
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link href="/notes" className="flex h-9 w-9 shrink-0 items-center justify-center text-primary-foreground rounded-full transition-transform duration-300 hover:-translate-y-1">
+                  <Notebook className="h-5 w-5 text-black"></Notebook>
                   <span className="sr-only"> DashBoard Avatar</span>
                 </Link>
               </TooltipTrigger>
