@@ -22,7 +22,7 @@ export function DatePickerDemo() {
         <Button
           variant={"outline"}
           className={cn(
-            "justify-start transition-transform duration-300 hover:-translate-y-1 hover:shadow-md w-[170px] border border-zinc-800 shadow-md bg-zinc-900 text-white",
+            "justify-start transition-transform duration-300 hover:-translate-y-1 hover:shadow-md w-[170px] border border-zinc-800 shadow-md text-white",
             !date && "text-muted-foreground"
           )}
         >
