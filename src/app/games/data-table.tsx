@@ -32,6 +32,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { DatePickerDemo } from "@/components/dateselector";
+import { SelectApostas } from "@/components/ui/apostasSelector";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -151,6 +152,10 @@ export function GamesTable<TData extends object, TValue>({
                   if (col.id === "Data") {
                     return <DatePickerDemo key={col.id}/>
                   }
+                  if (col.id === "Numero Da Aposta")
+                    return(
+                  <SelectApostas/>
+                  )
                   return (
                   <Input
                     key={col.id}
