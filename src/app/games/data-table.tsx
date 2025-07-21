@@ -69,6 +69,7 @@ export function GamesTable<TData extends object, TValue>({
       rowSelection,
     },
   });
+ 
 
   const [showAddRow, setShowAddRow] = React.useState(false);
   const [newRowData, setNewRowData] = React.useState<any>({});
@@ -152,15 +153,15 @@ export function GamesTable<TData extends object, TValue>({
               <div className="flex  gap-2 w-full justify-center mt-4 ">
                 {columns.map((col) => {
                   if (col.id === "Data") {
-                    return <DatePickerDemo/>
+                    return <DatePickerDemo key={col.id}/>
                   }
                   if (col.id === "Numero Da Aposta")
                     return(
-                  <SelectApostas/>
+                  <SelectApostas key={col.id}/>
                   )
                   if (col.id === "Casas")
                     return(
-                  <SelectCasas/>
+                  <SelectCasas key={col.id}/>
                   )
                   return (
                   <Input

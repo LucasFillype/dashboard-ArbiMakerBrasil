@@ -192,7 +192,7 @@ export function DataTable<TData, TValue>({
                     return !ignoredColumns.includes(col.id);
                   })
                   .map((col) => (
-                    <TableCell key={col.id}>
+                    <TableCell key={col.id} >
                       <Input
                         placeholder={col.id}
                         value={newRowData[col.id] || ""}
