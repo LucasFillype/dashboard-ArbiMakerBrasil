@@ -61,12 +61,12 @@ export const columns: ColumnDef<Payment>[] = [
     },
   },
   {
-    accessorKey: "cpf",
+    accessorKey: "Cpf",
     header: "CPF",
     cell: ({ row }) => <div>{row.getValue("cpf")}</div>,
   },
   {
-    accessorKey: "nome",
+    accessorKey: "Nome",
     header: ({ column }) => (
       <Button
         variant="ghost"
@@ -82,7 +82,7 @@ export const columns: ColumnDef<Payment>[] = [
     enableHiding: true,
   },
   {
-    accessorKey: "senha",
+    accessorKey: "Senha",
     header: ({ column }) => (
       <Button
         variant="ghost"
@@ -98,7 +98,7 @@ export const columns: ColumnDef<Payment>[] = [
     enableHiding: true,
   },
   {
-    accessorKey: "email",
+    accessorKey: "E-mail",
     header: ({ column }) => (
       <Button
         variant="ghost"
@@ -113,7 +113,7 @@ export const columns: ColumnDef<Payment>[] = [
     ),
   },
   {
-    accessorKey: "cep",
+    accessorKey: "CEP",
     header: ({ column }) => (
       <Button
         variant="ghost"

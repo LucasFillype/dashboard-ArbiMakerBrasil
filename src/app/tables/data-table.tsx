@@ -199,7 +199,7 @@ export function DataTable<TData, TValue>({
                         onChange={(e) =>
                           setNewRowData({ ...newRowData, [col.id]: e.target.value })
                         }
-                        className="w-full"
+                        className="w-full border-zinc-700"
                       />
                     </TableCell>
                   ))}
