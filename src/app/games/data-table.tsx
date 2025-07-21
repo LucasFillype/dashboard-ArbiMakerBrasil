@@ -36,6 +36,7 @@ import { SelectApostas } from "@/components/ui/apostasSelector";
 import { SelectCasas } from "@/components/ui/casasSelector";
 import { Key } from "lucide-react";
 
+
 import { format } from "date-fns"
 
 interface DataTableProps<TData, TValue> {
@@ -169,7 +170,15 @@ export function GamesTable<TData extends object, TValue>({
                     ) : col.id === "Numero Da Aposta" ? (
                       <SelectApostas />
                     ) : col.id === "Casa1" ? (
-                      <SelectCasas />
+                      <SelectCasas
+                        value={newRowData["Casa1"] || ""}
+                        onChange={(value) =>
+                          setNewRowData((prev: any) => ({
+                            ...prev,
+                            Casa1: value,
+                          }))
+                        }
+                      />
                     ) : col.id === "Casa2" ? (
                       <SelectCasas />
                     ) : (

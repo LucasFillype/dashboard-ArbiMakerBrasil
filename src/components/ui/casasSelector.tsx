@@ -10,9 +10,14 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 
-export function SelectCasas() {
+interface SelectCasasProps {
+  value?: string
+  onChange?: (value: string) => void
+}
+
+export function SelectCasas({ value, onChange }: SelectCasasProps) {
   return (
-    <Select>
+    <Select value={value} onValueChange={onChange}>
       <SelectTrigger className="w-[180px] border-zinc-700">
         <SelectValue placeholder="Selecione a casa" className="text-white" />
       </SelectTrigger>
@@ -29,7 +34,6 @@ export function SelectCasas() {
           <SelectItem value="casa8">Esportivabet</SelectItem>
           <SelectItem value="casa9">Stake</SelectItem>
           <SelectItem value="casa10">Vbet</SelectItem>
-
         </SelectGroup>
       </SelectContent>
     </Select>
