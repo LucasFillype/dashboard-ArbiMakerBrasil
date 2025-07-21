@@ -172,12 +172,12 @@ export function GamesTable<TData extends object, TValue>({
                     ) : col.id === "Casa1" ? (
                       <SelectCasas
                         value={newRowData["Casa1"] || ""}
-                        onChange={(value) =>
+                        onChange={(value: string) => { console.log("Selecionou Casa1:", value)
                           setNewRowData((prev: any) => ({
                             ...prev,
                             Casa1: value,
                           }))
-                        }
+                        }}
                       />
                     ) : col.id === "Casa2" ? (
                       <SelectCasas />

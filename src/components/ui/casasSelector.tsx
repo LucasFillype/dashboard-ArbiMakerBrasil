@@ -24,16 +24,16 @@ export function SelectCasas({ value, onChange }: SelectCasasProps) {
       <SelectContent className="border-zinc-700">
         <SelectGroup className="border-zinc-800 text-white">
           <SelectLabel className="border-zinc-800">Apostas</SelectLabel>
-          <SelectItem value="casa1">Pinnacle</SelectItem>
-          <SelectItem value="casa2">Betano</SelectItem>
-          <SelectItem value="casa3">Betnacional</SelectItem>
-          <SelectItem value="casa4">Novibet</SelectItem>
-          <SelectItem value="casa5">Betão</SelectItem>
-          <SelectItem value="casa6">Jonbet</SelectItem>
-          <SelectItem value="casa7">Pixbet</SelectItem>
-          <SelectItem value="casa8">Esportivabet</SelectItem>
-          <SelectItem value="casa9">Stake</SelectItem>
-          <SelectItem value="casa10">Vbet</SelectItem>
+          <SelectItem value="Pinnacle">Pinnacle</SelectItem>
+          <SelectItem value="Betano">Betano</SelectItem>
+          <SelectItem value="Betnacional">Betnacional</SelectItem>
+          <SelectItem value="Novibet">Novibet</SelectItem>
+          <SelectItem value="Betão">Betão</SelectItem>
+          <SelectItem value="Jonbet">Jonbet</SelectItem>
+          <SelectItem value="Pixbet">Pixbet</SelectItem>
+          <SelectItem value="Esportivabet">Esportivabet</SelectItem>
+          <SelectItem value="Stake">Stake</SelectItem>
+          <SelectItem value="Vbet">Vbet</SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>
