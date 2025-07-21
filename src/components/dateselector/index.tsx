@@ -13,28 +13,46 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 
+interface DatePickerDemoProps {
+  value?: Date
+  onChange?: (date: Date) => void
+}
 
-export function DatePickerDemo() {
-  const [date, setDate] = React.useState<Date>()
+export function DatePickerDemo({ value, onChange }: DatePickerDemoProps) {
+  const [internalDate, setInternalDate] = React.useState<Date | undefined>(value)
+
+  React.useEffect(() => {
+    setInternalDate(value)
+  }, [value])
+
+  const handleSelect = (selectedDate: Date | undefined) => {
+    if (selectedDate) {
+      setInternalDate(selectedDate)
+      onChange?.(selectedDate)
+    }
+  }
+
   return (
     <Popover>
       <PopoverTrigger asChild>
         <Button
           variant={"outline"}
           className={cn(
-            "justify-start transition-transform duration-300 hover:-translate-y-1 hover:shadow-md w-[170px] border border-zinc-800 shadow-md text-white",
-            !date && "text-muted-foreground"
+            "justify-start w-[170px] border border-zinc-800 text-white",
+            !internalDate && "text-muted-foreground"
           )}
         >
           <CalendarIcon className="mr-2 h-4 w-4" />
-          {date ? format(date, "PPP") : <span>Escolha a Data</span>}
+          {internalDate instanceof Date && !isNaN(internalDate.getTime())
+            ? format(internalDate, "dd/MM/yyyy")
+            : <span>Escolha a Data</span>}
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-auto p-0 text-white bg-zinc-900 border-zinc-900">
+      <PopoverContent className="w-auto p-0 bg-zinc-900 border-zinc-900 text-white">
         <Calendar
           mode="single"
-          selected={date}
-          onSelect={setDate}
+          selected={internalDate}
+          onSelect={handleSelect}
           initialFocus
         />
       </PopoverContent>

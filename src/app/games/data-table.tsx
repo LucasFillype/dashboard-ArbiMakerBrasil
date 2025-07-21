@@ -36,6 +36,8 @@ import { SelectApostas } from "@/components/ui/apostasSelector";
 import { SelectCasas } from "@/components/ui/casasSelector";
 import { Key } from "lucide-react";
 
+import { format } from "date-fns"
+
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
@@ -154,7 +156,16 @@ export function GamesTable<TData extends object, TValue>({
                 {columns.map((col) => (
                   <TableCell key={col.id}>
                     {col.id === "Data" ? (
-                      <DatePickerDemo />
+                      <DatePickerDemo
+                        value={newRowData["Data"] ? new Date(newRowData["Data"]) : undefined}
+                        onChange={(date) => {
+                          const formattedDate = date ? format(date, "dd/MM/yyyy") : "";
+                          setNewRowData((prev: any) => ({
+                            ...prev,
+                            Data: formattedDate,
+                          }));
+                        }}
+                      />
                     ) : col.id === "Numero Da Aposta" ? (
                       <SelectApostas />
                     ) : col.id === "Casa1" ? (
