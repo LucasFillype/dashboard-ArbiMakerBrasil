@@ -168,11 +168,21 @@ export function GamesTable<TData extends object, TValue>({
                         }}
                       />
                     ) : col.id === "Numero Da Aposta" ? (
-                      <SelectApostas />
+                      <SelectApostas
+                        value={newRowData["Numero Da Aposta"] || ""}
+                        onChange={(value: string) => {
+                          console.log("Selecionou Numero Da Aposta:", value)
+                          setNewRowData((prev: any) => ({
+                            ...prev,
+                            ["Numero Da Aposta"]: value,
+                          }))
+                        }}
+                      />
                     ) : col.id === "Casa1" ? (
                       <SelectCasas
                         value={newRowData["Casa1"] || ""}
-                        onChange={(value: string) => { console.log("Selecionou Casa1:", value)
+                        onChange={(value: string) => {
+                          console.log("Selecionou Casa1:", value)
                           setNewRowData((prev: any) => ({
                             ...prev,
                             Casa1: value,
@@ -180,7 +190,16 @@ export function GamesTable<TData extends object, TValue>({
                         }}
                       />
                     ) : col.id === "Casa2" ? (
-                      <SelectCasas />
+                      <SelectCasas
+                        value={newRowData["Casa2"] || ""}
+                        onChange={(value: string) => {
+                          console.log("Selecionou Casa2:", value)
+                          setNewRowData((prev: any) => ({
+                            ...prev,
+                            Casa2: value,
+                          }))
+                        }}
+                      />
                     ) : (
                       <Input
                         placeholder={col.id}
