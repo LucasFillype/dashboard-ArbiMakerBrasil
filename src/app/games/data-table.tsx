@@ -34,6 +34,7 @@ import {
 import { DatePickerDemo } from "@/components/dateselector";
 import { SelectApostas } from "@/components/ui/apostasSelector";
 import { SelectCasas } from "@/components/ui/casasSelector";
+import { Key } from "lucide-react";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
