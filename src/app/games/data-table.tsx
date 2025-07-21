@@ -31,7 +31,7 @@ import {
   DropdownMenuContent,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { DatePickerDemo } from "@/components/dateselector";
+import { DatePickerDemo} from "@/components/dateselector"
 import { SelectApostas } from "@/components/ui/apostasSelector";
 import { SelectCasas } from "@/components/ui/casasSelector";
 import { Key } from "lucide-react";
@@ -69,7 +69,7 @@ export function GamesTable<TData extends object, TValue>({
       rowSelection,
     },
   });
- 
+
 
   const [showAddRow, setShowAddRow] = React.useState(false);
   const [newRowData, setNewRowData] = React.useState<any>({});
@@ -80,7 +80,7 @@ export function GamesTable<TData extends object, TValue>({
     <div>
       <div className="flex flex-row justify-center items-center py-4 gap-4 text-white border-zinc-700">
         <div className="flex flex-row justify-center gap-4">
-          <DatePickerDemo />
+          <DatePickerDemo/>
           <Button
             variant="outline"
             className="ml-auto border border-green-700"
@@ -153,32 +153,39 @@ export function GamesTable<TData extends object, TValue>({
               <div className="flex  gap-2 w-full justify-center mt-4 ">
                 {columns.map((col) => {
                   if (col.id === "Data") {
-                    return <DatePickerDemo key={col.id}/>
+                    return <DatePickerDemo
+                      key={col.id}
+                    />
                   }
                   if (col.id === "Numero Da Aposta")
-                    return(
-                  <SelectApostas key={col.id}/>
-                  )
-                  if (col.id === "Casas")
-                    return(
-                  <SelectCasas key={col.id}/>
-                  )
+                    return (
+                      <SelectApostas key={col.id} />
+                    )
+                  if (col.id === "Casa1")
+                    return (
+                      <SelectCasas key={col.id} />
+                    )
+                    if (col.id === "Casa2")
+                    return (
+                      <SelectCasas key={col.id} />
+                    )
                   return (
-                  <Input
-                    key={col.id}
-                    placeholder={col.id}
-                    className="w-40 text-white border border-zinc-800"
-                    onChange={(e) =>
-                      setNewRowData((prev: any) => ({
-                        ...prev,
-                        [col.id as string]: e.target.value,
-                      }))
-                    }
-                  />
-                  )})}
+                    <Input
+                      key={col.id}
+                      placeholder={col.id}
+                      className="w-40 text-white border border-zinc-800"
+                      onChange={(e) =>
+                        setNewRowData((prev: any) => ({
+                          ...prev,
+                          [col.id as string]: e.target.value,
+                        }))
+                      }
+                    />
+                  )
+                })}
               </div>
             )}
-            
+
             {table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row) => (
                 <TableRow

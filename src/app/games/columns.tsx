@@ -76,8 +76,24 @@ export const columns: ColumnDef<Games>[] = [
   },
 
   {
-    id: "Casas",
-    accessorKey: "Casas",
+    id: "Casa1",
+    accessorKey: "Casa1",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Casas
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </Button>
+      );
+    },
+  },
+
+  {
+    id: "Casa2",
+    accessorKey: "Casa2",
     header: ({ column }) => {
       return (
         <Button
