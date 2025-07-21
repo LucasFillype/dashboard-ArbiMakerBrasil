@@ -66,65 +66,22 @@ export const columns: ColumnDef<Payment>[] = [
     cell: ({ row }) => <div>{row.getValue("cpf")}</div>,
   },
   {
+    id: "nome",
     accessorKey: "Nome",
-    header: ({ column }) => (
-      <Button
-        variant="ghost"
-        onClick={() =>
-          column.toggleSorting(column.getIsSorted() === "asc")
-        }
-        className="flex items-center"
-      >
-        Nome
-        <ArrowUpDown className="ml-2 h-4 w-4" />
-      </Button>
-    ),
-    enableHiding: true,
+   
   },
   {
+    id: "senha",
     accessorKey: "Senha",
-    header: ({ column }) => (
-      <Button
-        variant="ghost"
-        onClick={() =>
-          column.toggleSorting(column.getIsSorted() === "asc")
-        }
-        className="flex items-center"
-      >
-        Senha
-        <ArrowUpDown className="ml-2 h-4 w-4" />
-      </Button>
-    ),
-    enableHiding: true,
+
   },
   {
+    id: "email",
     accessorKey: "E-mail",
-    header: ({ column }) => (
-      <Button
-        variant="ghost"
-        onClick={() =>
-          column.toggleSorting(column.getIsSorted() === "asc")
-        }
-        className="flex items-center"
-      >
-        Email
-        <ArrowUpDown className="ml-2 h-4 w-4" />
-      </Button>
-    ),
   },
   {
+    id: "cep",
     accessorKey: "CEP",
-    header: ({ column }) => (
-      <Button
-        variant="ghost"
-        onClick={() =>
-          column.toggleSorting(column.getIsSorted() === "asc")
-        }
-        className="flex items-center"
-      >
-        CEP
-        <ArrowUpDown className="ml-2 h-4 w-4" />
-      </Button>
-    ),
+   
   },
 ]

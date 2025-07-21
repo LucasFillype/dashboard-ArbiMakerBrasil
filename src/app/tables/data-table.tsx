@@ -122,12 +122,12 @@ export function DataTable<TData, TValue>({
               ))}
           </DropdownMenuContent>
         </DropdownMenu>
-        <Button className=" border-green-700" variant="outline" onClick={() => setShowAddRow(!showAddRow)}>
+        <Button className=" border-zinc-700" variant="outline" onClick={() => setShowAddRow(!showAddRow)}>
           {showAddRow ? "Cancelar" : "Adicionar"}
         </Button>
         <Button
           variant="outline"
-          className={isDeleteMode ? "text-white border-red-600" : "border-red-600"}
+          className={isDeleteMode ? "text-green-700 border-zinc-600" : "border-zinc-600 text-white "}
           onClick={() => setIsDeleteMode(!isDeleteMode)}
         >
           {isDeleteMode ? "Cancelar" : "Excluir"}
