@@ -22,8 +22,10 @@ export type Games = {
   NumeroDaAposta: string;
   Stake: string;
   status: "Concluído" | "Em aberto" ;
-  Casas: string;
+  Casa1: string;
+  Casa2: string;
   ODD: string;
+  Lucro: string;
 };
 
 export const columns: ColumnDef<Games>[] = [

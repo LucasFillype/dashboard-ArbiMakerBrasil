@@ -83,7 +83,7 @@ export function GamesTable<TData extends object, TValue>({
           <DatePickerDemo />
           <Button
             variant="outline"
-            className="ml-auto border border-green-700"
+            className="ml-auto border border-zinc-700"
             onClick={() => setShowAddRow(!showAddRow)}
           >
             {showAddRow ? (
@@ -94,7 +94,7 @@ export function GamesTable<TData extends object, TValue>({
           </Button>
           {showAddRow && (
             <Button
-              className="border border-green-600"
+              className="border border-zinc-700 text-green-700"
               onClick={() => {
                 setTableData([...tableData, newRowData]);
                 setNewRowData({});
