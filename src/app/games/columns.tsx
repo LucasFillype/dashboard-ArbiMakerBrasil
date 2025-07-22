@@ -33,82 +33,22 @@ export const columns: ColumnDef<Games>[] = [
   {
     id: "Data",
     accessorKey: "Data",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Data
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      );
-    },
   },
   {
     id: "Horário",
     accessorKey: "Horário",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Horário
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      );
-    },
   },
 
   {
     id: "Numero Da Aposta",
     accessorKey: "Numero Da Aposta",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Número da Aposta
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      );
-    },
   },
+
 
   {
     id: "Casa1",
     accessorKey: "Casa1",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Casas
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      );
-    },
   },
-
-  {
-    id: "Casa2",
-    accessorKey: "Casa2",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Casas
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      );
-    },
-  },
-  
 
   {
     id: "Stake1",
@@ -128,17 +68,11 @@ export const columns: ColumnDef<Games>[] = [
   {
     id: "ODD1",
     accessorKey: "ODD1",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          ODD
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      );
-    },
+  },
+
+  {
+    id: "Casa2",
+    accessorKey: "Casa2",
   },
 
    {
@@ -159,23 +93,12 @@ export const columns: ColumnDef<Games>[] = [
   {
     id: "ODD2",
     accessorKey: "ODD2",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          ODD
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      );
-    },
   },
 
   {
     id: "Lucro",
     accessorKey: "Lucro",
-    header: () => <div className="text-right">Stake</div>,
+    header: () => <div className="text-right">Lucro da Aposta</div>,
     cell: ({ row }) => {
       const Stake = parseFloat(row.getValue("Lucro"));
       const formatted = new Intl.NumberFormat("en-US", {
@@ -183,7 +106,7 @@ export const columns: ColumnDef<Games>[] = [
         currency: "USD",
       }).format(Stake);
 
-      return <div className="text-right font-medium">{formatted}</div>;
+      return <div className="text-right font-medium text-green-500">{formatted}</div>;
     },
   },
 ];

@@ -24,7 +24,7 @@ export function SelectCasas({ value, onChange }: SelectCasasProps) {
       <SelectContent className="border-zinc-700">
         <SelectGroup className="border-zinc-800 text-white">
           <SelectLabel className="border-zinc-800">Apostas</SelectLabel>
-          <SelectItem value="Pinnacle">Pinnacle</SelectItem>
+          <SelectItem value="Pinnacle" className="text-orange-500">Pinnacle</SelectItem>
           <SelectItem value="Betano">Betano</SelectItem>
           <SelectItem value="Betnacional">Betnacional</SelectItem>
           <SelectItem value="Novibet">Novibet</SelectItem>
@@ -34,6 +34,7 @@ export function SelectCasas({ value, onChange }: SelectCasasProps) {
           <SelectItem value="Esportivabet">Esportivabet</SelectItem>
           <SelectItem value="Stake">Stake</SelectItem>
           <SelectItem value="Vbet">Vbet</SelectItem>
+          <SelectItem value="Pixbet">Pixbet</SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>
