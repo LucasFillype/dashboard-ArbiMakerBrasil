@@ -35,6 +35,7 @@ import { CardBanco } from "@/components/ui/combobox";
 export default function Home() {
   return (
     <main className="sm:ml-14 p-4 bg-gradient-to-br from-zinc-950 via-neutral-900 to-zinc-950 text-zinc-200 min-h-screen">
+      <p className="text-bold text-white mb-6"> Seja bem vindo, Lucas!</p>
       <section className="grid grid-cols-2 lg:grid-cols-5 gap-4 ">
         <Card className="bg-zinc-900  border-zinc-900 shadow-md rounded-2xl transition-transform duration-300 ease-in-out hover:-translate-y-5">
           <CardHeader className="bg-zinc-900">
