@@ -34,7 +34,7 @@ import {
 import { DatePickerDemo } from "@/components/dateselector"
 import { SelectApostas } from "@/components/ui/apostasSelector";
 import { SelectCasas } from "@/components/ui/casasSelector";
-import { Key } from "lucide-react";
+import { Key, Plus } from "lucide-react";
 
 
 import { format } from "date-fns"
@@ -83,7 +83,7 @@ export function GamesTable<TData extends object, TValue>({
     <div>
       <div className="flex flex-row justify-center items-center py-4 gap-4 text-white border-zinc-700">
         <div className="flex flex-row justify-center gap-4">
-          <DatePickerDemo/>
+          <DatePickerDemo />
           <Button
             variant="outline"
             className="ml-auto border border-zinc-700 transition-transform duration-300 ease-in-out hover:-translate-y-2"
@@ -92,7 +92,10 @@ export function GamesTable<TData extends object, TValue>({
             {showAddRow ? (
               <span className="text-red-500 font-bold">Cancelar</span>
             ) : (
-              "Adicionar Jogo"
+              <span className="flex items-center gap-2">
+                <Plus className="w-4 h-4" />
+                Adicionar Jogo
+              </span>
             )}
           </Button>
           {showAddRow && (
@@ -105,6 +108,7 @@ export function GamesTable<TData extends object, TValue>({
               }}
             >
               Salvar Jogo
+
             </Button>
           )}
         </div>
