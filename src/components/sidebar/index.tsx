@@ -8,13 +8,19 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "@/components/ui/avatar";
+import { usePathname } from "next/navigation";
+ 
+
+
+
+
 
 
 export function Sidebar() {
   return (
     <div className="flex w-full flex-col bg-muted/40">
       <aside
-        className="fixed inset-y-0 left-0 z-10 hidden w-14 border-0 bg- shadow-lg sm:flex border-r border-gray-300 bg-white">
+        className="fixed inset-y-0 left-0 z-10 hidden w-14 border-0 bg- shadow-lg sm:flex border-r bg-zinc-800">
         <nav className="flex flex-col items-center gap-4 px-2 py-5">
           <div className="flex flex-row flex-wrap items-center gap-12 "></div>
           <Avatar className="rounded-lg ">
@@ -25,7 +31,7 @@ export function Sidebar() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link href="/" className="flex h-9 w-9 shrink-0 items-center justify-center text-primary-foreground rounded-full transition-transform duration-300 hover:-translate-y-1">
-                  <Home className="h-5 w-5 text-black"></Home>
+                  <Home className= "h-5 w-5 text-white" />
                   <span className="sr-only"> DashBoard Avatar</span>
                 </Link>
               </TooltipTrigger>
@@ -34,7 +40,7 @@ export function Sidebar() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link href="/games" className="flex h-9 w-9 shrink-0 items-center justify-center text-primary-foreground rounded-full transition-transform duration-300 hover:-translate-y-1">
-                  <Volleyball className="h-5 w-5 text-black"></Volleyball>
+                   <Volleyball className= "h-5 w-5 text-white" />
                   <span className="sr-only"> DashBoard Avatar</span>
                 </Link>
               </TooltipTrigger>
@@ -43,7 +49,7 @@ export function Sidebar() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link href="/tables" className="flex h-9 w-9 shrink-0 items-center justify-center text-primary-foreground rounded-full transition-transform duration-300 hover:-translate-y-1">
-                  <User2 className="h-5 w-5 text-black"></User2>
+                  <User2 className="h-5 w-5 text-white"></User2>
                   <span className="sr-only"> DashBoard Avatar</span>
                 </Link>
               </TooltipTrigger>
@@ -52,7 +58,7 @@ export function Sidebar() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link href="/notes" className="flex h-9 w-9 shrink-0 items-center justify-center text-primary-foreground rounded-full transition-transform duration-300 hover:-translate-y-1">
-                  <Notebook className="h-5 w-5 text-black"></Notebook>
+                  <Notebook className="h-5 w-5 text-white"></Notebook>
                   <span className="sr-only"> DashBoard Avatar</span>
                 </Link>
               </TooltipTrigger>
@@ -73,8 +79,8 @@ export function Sidebar() {
               </Button>
             </SheetTrigger>
 
-            <SheetContent className="sm:max-w-x">
-              <nav className="grid gap-6 text-lg -font-medium">
+            <SheetContent className="sm:max-w-x bg-zinc-800 border-none">
+              <nav className="grid gap-6 text-lg -font-medium text-white ">
                 <Link href="#" className="flex h-10 w-10 bg-primary rounded-full text-lg items-center justify-center text-primary-foregorund md:text-base gap-2"
                   prefetch={false}
                 >
@@ -84,7 +90,7 @@ export function Sidebar() {
                 </Link>
 
                 <Link
-                  href="#" className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+                  href="#" className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground transition-transform duration-300 ease-in-out hover:-translate-y-2"
                   prefetch={false}
                 >
                   <Home className="h-5 w-5 transition-all" />
@@ -92,7 +98,7 @@ export function Sidebar() {
                 </Link>
 
                 <Link
-                  href="#" className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+                  href="#" className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground transition-transform duration-300 ease-in-out hover:-translate-y-2"
                   prefetch={false}
                 >
                   <Table2 className="h-5 w-5 transition-all" />
@@ -100,7 +106,7 @@ export function Sidebar() {
                 </Link>
 
                 <Link
-                  href="#" className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+                  href="#" className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground transition-transform duration-300 ease-in-out hover:-translate-y-2"
                   prefetch={false}
                 >
                   <User2 className="h-5 w-5 transition-all" />
@@ -108,7 +114,7 @@ export function Sidebar() {
                 </Link>
 
                 <Link
-                  href="#" className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+                  href="#" className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground transition-transform duration-300 ease-in-out hover:-translate-y-2"
                   prefetch={false}
                 >
                   <Settings2 className="h-5 w-5 transition-all" />
