@@ -13,7 +13,6 @@ export default async function GamesPage() {
 
   return (
     <main>
-      <h1>Tabela de Jogos!</h1>
       <div className="container mx-auto py-10">
         <GamesTable columns={columns} data={data} />
       </div>

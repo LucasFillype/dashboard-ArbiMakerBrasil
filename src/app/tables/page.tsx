@@ -21,7 +21,7 @@ export default async function PaymentPage() {
   return (
     <section>
       <div className="p-4">
-        <h1 className="text-2xl font-bold mb-4"></h1>
+        <p className="text-2xl font-bold mb-4 "></p>
         <DataTable columns={columns} data={data} />
         <div className="grid w-full gap-3">
           <div className="flex flex-row justify-end-safe gap-y-10px">
