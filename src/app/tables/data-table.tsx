@@ -104,7 +104,7 @@ export function DataTable<TData, TValue>({
         />
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline" className="border-zinc-700 transition-transform duration-300 ease-in-out hover:-translate-y-2">Colunas</Button>
+            <Button variant="outline" className="border-zinc-700 transition-transform duration-300 ease-in-out hover:-translate-y-1">Colunas</Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" side="top">
             {table
@@ -127,7 +127,7 @@ export function DataTable<TData, TValue>({
         </Button>
         <Button
           variant="outline"
-          className={isDeleteMode ? "text-green-700 border-zinc-600 transition-transform duration-300 ease-in-out hover:-translate-y-2" : "border-zinc-700 text-white transition-transform duration-300 ease-in-out hover:-translate-y-2"}
+          className={isDeleteMode ? "text-green-700 border-zinc-600 transition-transform duration-300 ease-in-out hover:-translate-y-1" : "border-zinc-700 text-white transition-transform duration-300 ease-in-out hover:-translate-y-2"}
           onClick={() => setIsDeleteMode(!isDeleteMode)}
         >
           {isDeleteMode ? "Cancelar" : "Excluir"}
@@ -135,7 +135,7 @@ export function DataTable<TData, TValue>({
         {isDeleteMode && (
           <div className="flex justify-center text-white">
             <Button
-              className="border border-zinc-700 text-red-700 transition-transform duration-300 ease-in-out hover:-translate-y-2"
+              className="border border-zinc-700 text-red-700 transition-transform duration-300 ease-in-out hover:-translate-y-1"
               onClick={() => {
                 // Obtém os índices das linhas selecionadas
                 const selectedIds = table.getSelectedRowModel().rows.map(r => r.index)

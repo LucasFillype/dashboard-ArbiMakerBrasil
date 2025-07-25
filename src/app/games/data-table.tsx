@@ -83,10 +83,10 @@ export function GamesTable<TData extends object, TValue>({
     <div>
       <div className="flex flex-row justify-center items-center py-4 gap-4 text-white border-zinc-700">
         <div className="flex flex-row justify-center gap-4">
-          <DatePickerDemo />
+          <DatePickerDemo/>
           <Button
             variant="outline"
-            className="ml-auto border border-zinc-700 transition-transform duration-300 ease-in-out hover:-translate-y-2"
+            className="ml-auto border border-zinc-700 transition-transform duration-300 ease-in-out hover:-translate-y-1"
             onClick={() => setShowAddRow(!showAddRow)}
           >
             {showAddRow ? (

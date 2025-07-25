@@ -38,7 +38,7 @@ export function DatePickerDemo({ value, onChange }: DatePickerDemoProps) {
         <Button
           variant={"outline"}
           className={cn(
-            "justify-start w-[170px] border border-zinc-800 text-white",
+            "justify-start w-[170px] border border-zinc-800 text-white transition-transform duration-300 ease-in-out hover:-translate-y-1",
             !internalDate && "text-muted-foreground"
           )}
         >
