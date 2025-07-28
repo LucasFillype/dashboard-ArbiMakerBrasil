@@ -22,7 +22,7 @@ export default async function GamesPage() {
       </div>
       <div className="flex justify-around">
         <MostrarLucro />
-        <Card className="border-zinc-700  border-zinc-700 shadow-md rounded-2xl transition-transform duration-300 ease-in-out hover:-translate-y-5 p-4 ">
+        <Card className="border-zinc-700  border-zinc-700 shadow-md rounded-2xl ">
           <CardHeader className="text-bold justify-center">
             <CardTitle className="text-white" >Valor em cada Casa</CardTitle>
           </CardHeader>
