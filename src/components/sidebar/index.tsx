@@ -30,6 +30,7 @@ export function Sidebar() {
                   <span className="sr-only"> DashBoard Avatar</span>
                 </Link>
               </TooltipTrigger>
+              <TooltipContent className="text-white" side="right">Painel</TooltipContent>
             </Tooltip>
 
             <Tooltip>
@@ -39,6 +40,7 @@ export function Sidebar() {
                   <span className="sr-only"> DashBoard Avatar</span>
                 </Link>
               </TooltipTrigger>
+              <TooltipContent className="text-white" side="right">Jogos</TooltipContent>
             </Tooltip>
 
             <Tooltip>
@@ -48,6 +50,7 @@ export function Sidebar() {
                   <span className="sr-only"> DashBoard Avatar</span>
                 </Link>
               </TooltipTrigger>
+              <TooltipContent className="text-white" side="right">Usuários</TooltipContent>
             </Tooltip>
 
             <Tooltip>
@@ -57,8 +60,8 @@ export function Sidebar() {
                   <span className="sr-only"> DashBoard Avatar</span>
                 </Link>
               </TooltipTrigger>
+              <TooltipContent className="text-white" side="right">Anotações</TooltipContent>
             </Tooltip>
-
           </TooltipProvider>
         </nav>
         
