@@ -22,6 +22,6 @@
 
 ## Instalações 🚀
 
--Shadcn.UI
+- Shadcn.UI
 ```bash
 npx shadcn@latest init
