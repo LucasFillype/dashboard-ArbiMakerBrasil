@@ -1,27 +1,27 @@
-Esse é um projeto em [Next.js](https://nextjs.org)
+# Projeto em [Next.js](https://nextjs.org)
 
 ## Tecnologias Utilizadas 💻:
 
-- NextJS
+- Next.js
 - HTML e TailwindCSS
 - JavaScript
-- Sahdcn.UI
-- Github
+- Shadcn.UI
+- GitHub
 
 ## Projeto:
 
-Dashboard ArbiMakerBrasil é um HUB gerenciador da operação de arbitragem esportiva, com planilhas, gráficos, tabelas e cards. Que contém dados importantes para o gerenciamento do usuário.
+**Dashboard ArbiMakerBrasil** é um HUB gerenciador da operação de arbitragem esportiva, com planilhas, gráficos, tabelas e cards. Contém dados importantes para o gerenciamento do usuário.
 
-[LINK para prévia do Dashboard!]
-( https://youtu.be/F52lYQiOvwU )
+[🔗 LINK para prévia do Dashboard!](https://youtu.be/F52lYQiOvwU)
 
-![Painel Principal](/public/fotos/Dashboard-painel.png)
-![Tabela de Jogos](/public/fotos/Dashboard-jogos.png) 
-![Tabela de Usuários](/public/fotos/Dashboard-usuários.png)
+### 🖼️ Imagens do Projeto:
 
-## Instalações 🚀:
-- Shadcn.UI
-```npx shadcn@latest init
-- Lucide React icons
-```npm install lucide-react
+![Painel Principal](./public/fotos/Dashboard-painel.png)
+![Tabela de Jogos](./public/fotos/Dashboard-jogos.png)
+![Tabela de Usuários](./public/fotos/Dashboard-usuários.png)
 
+## Instalações 🚀
+
+-Shadcn.UI
+```bash
+npx shadcn@latest init
