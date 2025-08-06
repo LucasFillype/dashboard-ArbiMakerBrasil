@@ -15,5 +15,5 @@ Dashboard ArbiMakerBrasil é um HUB gerenciador da operação de arbitragem espo
 [LINK para prévia do Dashboard!]
 ( https://youtu.be/F52lYQiOvwU )
 
-![Painel Principal](/public/fotos/)
+![Painel Principal](/public/fotos/Dashboard-painel.png)
 
