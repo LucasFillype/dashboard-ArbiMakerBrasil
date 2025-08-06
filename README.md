@@ -25,3 +25,8 @@
 - Shadcn.UI
 ```bash
 npx shadcn@latest init
+```
+- Lucide React Icons
+```bash
+npm install lucide-react
+```
