@@ -1,6 +1,6 @@
 Esse é um projeto em [Next.js](https://nextjs.org)
 
-## Tecnologias Utilizadas:
+## Tecnologias Utilizadas 💻:
 
 - NextJS
 - HTML e TailwindCSS
@@ -16,6 +16,11 @@ Dashboard ArbiMakerBrasil é um HUB gerenciador da operação de arbitragem espo
 ( https://youtu.be/F52lYQiOvwU )
 
 ![Painel Principal](/public/fotos/Dashboard-painel.png)
-![Tabela de Jogos](/public/fotos/Dashboard-jogos.png) ![Tabela de Usuários](/public/fotos/Dashboard-usuários.png)
+![Tabela de Jogos](/public/fotos/Dashboard-jogos.png) 
+![Tabela de Usuários](/public/fotos/Dashboard-usuários.png)
 ![Área de anotações](/public/fotos/Dashbord-Anotações.png)
+
+## Instalações 🚀:
+- Shadcn.UI
+'npx shadcn@latest init'
 
