@@ -22,6 +22,6 @@ Dashboard ArbiMakerBrasil é um HUB gerenciador da operação de arbitragem espo
 ## Instalações 🚀:
 - Shadcn.UI
 ```npx shadcn@latest init
-- Lucide React
+- Lucide React icons
 ```npm install lucide-react
 
