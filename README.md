@@ -6,6 +6,7 @@
 - HTML e TailwindCSS
 - JavaScript
 - Shadcn.UI
+- Recharts 
 - GitHub
 
 ## Projeto:
